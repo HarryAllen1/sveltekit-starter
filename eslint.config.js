@@ -87,13 +87,10 @@ export default tseslint.config(
 			'build/',
 			'.svelte-kit/',
 			'dist/',
-			'coverage/',
 			'src/lib/components/ui/',
-			'src/lib/ui-utils.ts',
-			'src/lib/gibberish.js',
+			'src/lib/utils.ts',
 			'static',
-			'vite.config.ts.timestamp-*',
-			'src/database.types.ts'
+			'vite.config.ts.timestamp-*'
 		]
 	}
 );
