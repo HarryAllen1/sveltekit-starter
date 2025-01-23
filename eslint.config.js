@@ -18,22 +18,22 @@ export default tseslint.config(
 			parserOptions: {
 				extraFileExtensions: ['.svelte'],
 				projectService: true,
-				tsconfigRootDir: import.meta.dirname,
+				tsconfigRootDir: import.meta.dirname
 			},
 			globals: {
 				...globals.browser,
 				...globals.node,
 				google: 'readonly',
-				gtag: 'readonly',
-			},
+				gtag: 'readonly'
+			}
 		},
 		rules: {
 			// Ensures that correct values are returned, which is often a problem when generating directions.
 			'@typescript-eslint/explicit-function-return-type': [
 				'error',
 				{
-					allowExpressions: true,
-				},
+					allowExpressions: true
+				}
 			],
 			// Makes Svelte snippets unusable
 			'@typescript-eslint/no-confusing-void-expression': 'off',
@@ -50,8 +50,8 @@ export default tseslint.config(
 					allowNullish: false,
 					allowNumber: true,
 					allowRegExp: false,
-					allowNever: false,
-				},
+					allowNever: false
+				}
 			],
 			'@typescript-eslint/unbound-method': 'off',
 			// its broken
@@ -64,23 +64,23 @@ export default tseslint.config(
 			eqeqeq: 'error',
 			'func-style': ['error', 'expression', { allowArrowFunctions: true }],
 			'no-console': ['warn', { allow: ['warn', 'error'] }],
-			yoda: 'error',
+			yoda: 'error'
 		},
 		linterOptions: {
-			reportUnusedDisableDirectives: 'error',
-		},
+			reportUnusedDisableDirectives: 'error'
+		}
 	},
 	{
 		files: ['**/*.svelte'],
 		languageOptions: {
 			parserOptions: {
-				parser: tseslint.parser,
-			},
+				parser: tseslint.parser
+			}
 		},
 		rules: {
 			'unicorn/prefer-top-level-await': 'off',
-			'@typescript-eslint/no-floating-promises': 'off',
-		},
+			'@typescript-eslint/no-floating-promises': 'off'
+		}
 	},
 	{
 		ignores: [
@@ -93,7 +93,7 @@ export default tseslint.config(
 			'src/lib/gibberish.js',
 			'static',
 			'vite.config.ts.timestamp-*',
-			'src/database.types.ts',
-		],
-	},
+			'src/database.types.ts'
+		]
+	}
 );
